@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dr. Sibasish Dhibar | Postdoctoral Researcher, TUM</title>
+<meta name="description" content="Dr. Sibasish Dhibar — Postdoctoral Researcher at the Technical University of Munich. Queueing theory, stochastic optimisation, Markov decision processes and reinforcement learning.">
+<meta property="og:title" content="Dr. Sibasish Dhibar — Postdoctoral Researcher, TUM">
+<meta property="og:description" content="Applied probability, queueing theory, stochastic optimisation and reinforcement learning for healthcare, logistics and human–AI systems.">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/158750356?v=4">
+<link rel="icon" href="https://avatars.githubusercontent.com/u/158750356?v=4">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+<style>
+:root{
+  --navy:#0b1f3a; --navy-2:#132d52; --blue:#2563eb; --cyan:#22d3ee; --gold:#f5b942;
+  --bg:#f6f8fb; --surface:#fff; --ink:#0f172a; --muted:#5b6475; --line:#e3e8ef;
+  --shadow:0 10px 30px -12px rgba(15,23,42,.18);
+}
+:root[data-theme="dark"]{
+  --bg:#0a0f1a; --surface:#111827; --ink:#e5e9f0; --muted:#94a0b4; --line:#1f2a3c;
+  --shadow:0 10px 30px -12px rgba(0,0,0,.6);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:16px/1.7 Inter,system-ui,sans-serif;transition:background .3s,color .3s}
+a{color:var(--blue);text-decoration:none}
+:root[data-theme="dark"] a{color:#7aa7ff}
+img{max-width:100%;display:block}
+.container{max-width:1160px;margin:0 auto;padding:0 20px}
+
+/* ---------- NAVBAR ---------- */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .3s,box-shadow .3s}
+.nav.scrolled{background:rgba(11,31,58,.92);backdrop-filter:blur(10px);box-shadow:0 4px 20px rgba(0,0,0,.2)}
+.nav .container{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{font-family:"Playfair Display",serif;font-size:1.35rem;color:#fff!important;font-weight:700;letter-spacing:.3px}
+.brand span{color:var(--gold)}
+.menu{display:flex;gap:26px;list-style:none;align-items:center}
+.menu a{color:rgba(255,255,255,.82);font-size:.92rem;font-weight:500;position:relative}
+.menu a:hover,.menu a.active{color:#fff}
+.menu a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--gold);transition:width .25s}
+.menu a:hover::after,.menu a.active::after{width:100%}
+.icon-btn{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:.9rem}
+.burger{display:none}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;color:#fff;overflow:hidden;
+  background:radial-gradient(1200px 600px at 85% 15%,rgba(34,211,238,.18),transparent 60%),
+             radial-gradient(900px 500px at 10% 90%,rgba(37,99,235,.35),transparent 60%),
+             linear-gradient(135deg,#071528 0%,var(--navy) 45%,var(--navy-2) 100%)}
+#net{position:absolute;inset:0;width:100%;height:100%;opacity:.55}
+.hero .container{position:relative;display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center;padding-top:90px;padding-bottom:60px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);padding:6px 14px;border-radius:999px;font-size:.82rem;color:#cfe3ff;margin-bottom:22px}
+.eyebrow .dot{width:8px;height:8px;border-radius:50%;background:#34d399;box-shadow:0 0 0 4px rgba(52,211,153,.25);animation:pulse 2s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 8px rgba(52,211,153,0)}}
+.hero h1{font-family:"Playfair Display",serif;font-size:clamp(2.4rem,5.5vw,4rem);line-height:1.1;margin-bottom:14px}
+.hero h1 .dr{color:var(--gold)}
+.typed{font-size:clamp(1.15rem,2.4vw,1.6rem);font-weight:600;min-height:2.4em;color:#e2ecff}
+.typed .t{background:linear-gradient(90deg,var(--cyan),#93c5fd);-webkit-background-clip:text;background-clip:text;color:transparent}
+.typed .caret{display:inline-block;width:3px;height:1.1em;background:var(--cyan);margin-left:4px;vertical-align:-3px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.hero p.sub{color:#b8c7de;max-width:600px;margin:6px 0 30px;font-size:1.05rem}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:12px 22px;border-radius:10px;font-weight:600;font-size:.95rem;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--gold);color:#1b1404!important;box-shadow:0 8px 24px -8px rgba(245,185,66,.6)}
+.btn-ghost{border:1px solid rgba(255,255,255,.3);color:#fff!important}
+.btn-ghost:hover{background:rgba(255,255,255,.08)}
+.socials{display:flex;gap:12px;margin-top:28px}
+.socials a{width:42px;height:42px;display:grid;place-items:center;border-radius:50%;background:rgba(255,255,255,.08);color:#fff!important;font-size:1.1rem;transition:background .2s,transform .2s}
+.socials a:hover{background:var(--blue);transform:translateY(-3px)}
+.portrait{position:relative;justify-self:center}
+.portrait .ring{width:min(320px,70vw);aspect-ratio:1;border-radius:50%;padding:6px;background:conic-gradient(from 0deg,var(--gold),var(--cyan),var(--blue),var(--gold));animation:spin 12s linear infinite}
+.portrait img{width:100%;height:100%;border-radius:50%;object-fit:cover;border:6px solid var(--navy);animation:spin 12s linear infinite reverse}
+@keyframes spin{to{transform:rotate(360deg)}}
+.badge-float{position:absolute;background:rgba(255,255,255,.95);color:var(--navy);padding:10px 14px;border-radius:12px;font-size:.82rem;font-weight:600;box-shadow:var(--shadow);display:flex;align-items:center;gap:8px;animation:float 5s ease-in-out infinite}
+.badge-float i{color:var(--blue)}
+.bf1{top:8%;left:-14%}.bf2{bottom:10%;right:-10%;animation-delay:1.5s}
+@keyframes float{50%{transform:translateY(-10px)}}
+.scroll-hint{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.6);font-size:1.2rem;animation:float 2s infinite}
+
+/* ---------- STATS ---------- */
+.stats{margin-top:-56px;position:relative;z-index:5}
+.stats .grid{display:grid;grid-template-columns:repeat(5,1fr);background:var(--surface);border-radius:16px;box-shadow:var(--shadow);border:1px solid var(--line);overflow:hidden}
+.stat{padding:24px 16px;text-align:center;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat b{display:block;font-size:2.1rem;font-weight:700;color:var(--blue);line-height:1.1}
+:root[data-theme="dark"] .stat b{color:#7aa7ff}
+.stat span{font-size:.82rem;color:var(--muted)}
+
+/* ---------- SECTIONS ---------- */
+section.block{padding:96px 0 40px;scroll-margin-top:60px}
+.sec-head{text-align:center;margin-bottom:48px}
+.sec-head .kicker{color:var(--blue);font-weight:600;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase}
+.sec-head h2{font-family:"Playfair Display",serif;font-size:clamp(1.9rem,3.5vw,2.6rem);margin-top:6px}
+.sec-head .bar{width:60px;height:3px;background:linear-gradient(90deg,var(--blue),var(--cyan));margin:14px auto 0;border-radius:3px}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* about */
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:start}
+.about p{margin-bottom:16px;color:var(--ink)}
+.about p.lead{font-size:1.1rem}
+.info-card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:26px;box-shadow:var(--shadow)}
+.info-card h3{font-size:1.05rem;margin-bottom:14px}
+.info-row{display:flex;gap:14px;padding:10px 0;border-bottom:1px dashed var(--line);font-size:.93rem}
+.info-row:last-child{border:0}
+.info-row i{color:var(--blue);width:18px;margin-top:5px}
+.info-row small{display:block;color:var(--muted);font-size:.8rem}
+
+/* research interests */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.rcard{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:28px;transition:transform .3s,box-shadow .3s,border-color .3s;position:relative;overflow:hidden}
+.rcard::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:linear-gradient(90deg,var(--blue),var(--cyan));transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.rcard:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:transparent}
+.rcard:hover::before{transform:scaleX(1)}
+.rcard .ic{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;font-size:1.3rem;color:#fff;background:linear-gradient(135deg,var(--blue),var(--cyan));margin-bottom:18px}
+.rcard h3{font-size:1.1rem;margin-bottom:8px}
+.rcard p{color:var(--muted);font-size:.93rem}
+.domains{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:34px}
+.pill{border:1px solid var(--line);background:var(--surface);padding:7px 16px;border-radius:999px;font-size:.88rem;display:inline-flex;gap:8px;align-items:center}
+.pill i{color:var(--blue)}
+
+/* timeline */
+.timeline{position:relative;max-width:900px;margin:0 auto}
+.timeline::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;background:linear-gradient(var(--blue),var(--cyan));transform:translateX(-50%)}
+.tl{position:relative;width:50%;padding:0 40px 36px}
+.tl:nth-child(odd){left:0;text-align:right}
+.tl:nth-child(even){left:50%}
+.tl::after{content:"";position:absolute;top:8px;width:16px;height:16px;border-radius:50%;background:var(--surface);border:4px solid var(--blue)}
+.tl:nth-child(odd)::after{right:-8px}.tl:nth-child(even)::after{left:-8px}
+.tl .box{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 20px;box-shadow:var(--shadow);text-align:left}
+.tl .date{display:inline-block;font-size:.78rem;font-weight:600;color:var(--blue);background:rgba(37,99,235,.1);padding:3px 10px;border-radius:999px;margin-bottom:8px}
+.tl h3{font-size:1.02rem}
+.tl .org{color:var(--muted);font-size:.9rem}
+
+/* publications */
+.pub-tools{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;margin-bottom:24px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px}
+.tabs button{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 16px;border-radius:999px;cursor:pointer;font:inherit;font-size:.88rem;font-weight:500;transition:all .2s}
+.tabs button.on{background:var(--blue);border-color:var(--blue);color:#fff}
+.tabs .n{opacity:.7;margin-left:5px;font-size:.8rem}
+.search{position:relative}
+.search input{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:9px 16px 9px 38px;font:inherit;font-size:.9rem;width:260px}
+.search i{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:.85rem}
+.pub{display:grid;grid-template-columns:70px 1fr;gap:18px;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:12px;padding:18px 20px;margin-bottom:14px;transition:transform .2s,box-shadow .2s}
+.pub:hover{transform:translateX(4px);box-shadow:var(--shadow)}
+.pub[data-k="rev"]{border-left-color:var(--gold)}
+.pub[data-k="ur"]{border-left-color:#8b5cf6}
+.pub[data-k="ch"]{border-left-color:#10b981}
+.pub.hide{display:none}
+.pub .yr{font-weight:700;font-size:1.15rem;color:var(--muted);text-align:center}
+.pub .yr small{display:block;font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.pub h3{font-size:1rem;line-height:1.45;margin-bottom:4px}
+.pub .au{font-size:.88rem;color:var(--muted)}
+.pub .au b{color:var(--ink)}
+.pub .ven{font-size:.9rem;font-style:italic;margin-top:2px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.tag{font-size:.72rem;font-weight:600;padding:2px 8px;border-radius:5px;background:rgba(37,99,235,.1);color:var(--blue)}
+.tag.q1{background:rgba(16,185,129,.13);color:#059669}
+.tag.top{background:rgba(139,92,246,.14);color:#7c3aed}
+.tag.code{background:rgba(15,23,42,.08);color:var(--ink)}
+:root[data-theme="dark"] .tag.q1{color:#34d399}:root[data-theme="dark"] .tag.top{color:#c4b5fd}:root[data-theme="dark"] .tag{color:#93b4ff}:root[data-theme="dark"] .tag.code{background:rgba(255,255,255,.08);color:var(--ink)}
+.empty{text-align:center;color:var(--muted);padding:20px;display:none}
+
+/* teaching */
+.teach-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.course{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px;transition:transform .3s,box-shadow .3s}
+.course:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.course .term{font-size:.78rem;color:var(--blue);font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+.course h3{font-size:1.02rem;margin:6px 0 4px}
+.course .code{font-size:.82rem;color:var(--muted)}
+.course .meta{display:flex;gap:16px;margin-top:14px;font-size:.85rem;color:var(--muted)}
+.course .meta i{color:var(--blue);margin-right:5px}
+.course .eval{display:inline-block;margin-top:10px;background:rgba(245,185,66,.18);color:#a16207;font-size:.78rem;font-weight:600;padding:3px 10px;border-radius:999px}
+:root[data-theme="dark"] .course .eval{color:var(--gold)}
+.ta{margin-top:26px;background:var(--surface);border:1px dashed var(--line);border-radius:14px;padding:18px 22px;font-size:.93rem}
+
+/* supervision */
+.sup-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.sup{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;gap:16px}
+.sup .ic{flex:none;width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:rgba(37,99,235,.1);color:var(--blue)}
+.sup h3{font-size:.97rem;line-height:1.45}
+.sup .m{font-size:.84rem;color:var(--muted);margin-top:4px}
+.status{font-size:.72rem;font-weight:600;padding:2px 8px;border-radius:5px;margin-left:6px}
+.status.done{background:rgba(16,185,129,.13);color:#059669}
+.status.on{background:rgba(245,185,66,.18);color:#a16207}
+.industry{margin-top:22px;background:linear-gradient(135deg,var(--navy),var(--navy-2));color:#e6eeff;border-radius:16px;padding:28px;display:flex;gap:22px}
+.industry .ic{flex:none;width:56px;height:56px;border-radius:14px;background:rgba(255,255,255,.1);display:grid;place-items:center;font-size:1.4rem;color:var(--gold)}
+.industry h3{color:#fff;font-size:1.1rem}
+.industry .m{color:#9fb3d1;font-size:.86rem;margin:2px 0 8px}
+
+/* awards + talks */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:26px}
+.panel h3{font-size:1.1rem;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.panel h3 i{color:var(--gold)}
+.li{display:flex;gap:14px;padding:12px 0;border-bottom:1px solid var(--line);font-size:.92rem}
+.li:last-child{border:0}
+.li .y{flex:none;width:62px;font-weight:600;color:var(--blue);font-size:.83rem}
+.li small{color:var(--muted)}
+.reviewers{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.reviewers span{background:var(--surface);border:1px solid var(--line);padding:6px 14px;border-radius:8px;font-size:.86rem}
+
+/* contact / footer */
+.contact{background:linear-gradient(135deg,#071528,var(--navy) 50%,var(--navy-2));color:#dbe6f7;margin-top:90px;padding:80px 0 30px}
+.contact .grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:40px}
+.contact h2{font-family:"Playfair Display",serif;color:#fff;font-size:2rem;margin-bottom:12px}
+.contact h4{color:#fff;margin-bottom:14px;font-size:1rem}
+.contact a{color:#cfe0ff}
+.contact .row{display:flex;gap:12px;margin-bottom:12px;font-size:.93rem}
+.contact .row i{color:var(--gold);margin-top:5px;width:16px}
+.foot{border-top:1px solid rgba(255,255,255,.1);margin-top:50px;padding-top:22px;display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center;font-size:.85rem;color:#8ea3c2}
+.visits{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);padding:6px 8px 6px 14px;border-radius:999px}
+.visits i{color:var(--cyan)}
+.visits img{height:20px;display:inline-block}
+.to-top{position:fixed;right:22px;bottom:22px;width:44px;height:44px;border-radius:50%;background:var(--blue);color:#fff;border:0;cursor:pointer;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:opacity .3s;z-index:40}
+.to-top.show{opacity:1;pointer-events:auto}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:960px){
+  .hero .container{grid-template-columns:1fr;text-align:center}
+  .hero p.sub{margin-left:auto;margin-right:auto}
+  .cta,.socials{justify-content:center}
+  .portrait{order:-1}
+  .portrait .ring{width:200px}
+  .badge-float{display:none}
+  .stats .grid{grid-template-columns:repeat(3,1fr)}
+  .stat:nth-child(3){border-right:0}
+  .stat:nth-child(n+4){border-top:1px solid var(--line)}
+  .about,.two,.contact .grid{grid-template-columns:1fr}
+  .cards,.teach-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:760px){
+  .burger{display:inline-grid;place-items:center}
+  .menu{position:fixed;top:68px;left:0;right:0;flex-direction:column;gap:0;background:rgba(11,31,58,.98);max-height:0;overflow:hidden;transition:max-height .35s}
+  .menu.open{max-height:520px}
+  .menu li{width:100%;text-align:center}
+  .menu a{display:block;padding:12px}
+  .menu a::after{display:none}
+  .cards,.teach-grid,.sup-grid{grid-template-columns:1fr}
+  .stats .grid{grid-template-columns:repeat(2,1fr)}
+  .stat{border-right:1px solid var(--line)!important;border-top:1px solid var(--line)}
+  .stat:nth-child(even){border-right:0!important}
+  .stat:nth-child(-n+2){border-top:0}
+  .stat:last-child{grid-column:1/-1;border-right:0!important}
+  .timeline::before{left:8px}
+  .tl,.tl:nth-child(even){width:100%;left:0;padding:0 0 26px 34px;text-align:left}
+  .tl:nth-child(odd)::after,.tl:nth-child(even)::after{left:0;right:auto}
+  .pub{grid-template-columns:1fr;gap:6px}
+  .pub .yr{text-align:left}.pub .yr small{display:inline;margin-left:6px}
+  .search input{width:100%}.search{width:100%}
+  .industry{flex-direction:column}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="nav" id="nav">
+  <div class="container">
+    <a href="#home" class="brand">S. <span>Dhibar</span></a>
+    <ul class="menu" id="menu">
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#teaching">Teaching</a></li>
+      <li><a href="#supervision">Supervision</a></li>
+      <li><a href="#honours">Honours</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><button class="icon-btn" id="theme" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button></li>
+    </ul>
+    <button class="icon-btn burger" id="burger" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+  <canvas id="net"></canvas>
+  <div class="container">
+    <div>
+      <div class="eyebrow"><span class="dot"></span> Technical University of Munich · Heilbronn, Germany</div>
+      <h1><span class="dr">Dr.</span> Sibasish Dhibar</h1>
+      <div class="typed">I am a <span class="t" id="typed"></span><span class="caret"></span></div>
+      <p class="sub">I build stochastic models of service systems — hospitals, warehouses, call centres and human–AI teams — and use optimisation and reinforcement learning to decide how they should be run.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#publications"><i class="fa-solid fa-book-open"></i> View Publications</a>
+        <a class="btn btn-ghost" href="#contact"><i class="fa-regular fa-envelope"></i> Get in Touch</a>
+        <!-- To add a CV download: upload CV.pdf to the repo and uncomment
+        <a class="btn btn-ghost" href="CV.pdf" download><i class="fa-solid fa-file-arrow-down"></i> Download CV</a> -->
+      </div>
+      <div class="socials">
+        <a href="mailto:sibasish.dhibar@tum.de" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://scholar.google.com/citations?user=O_9uGEEAAAAJ&hl=en" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+        <a href="https://www.linkedin.com/in/sibasish-dhibar-637152177/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://github.com/DhibarSibasish" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://sites.google.com/view/sibasishdhibar/home" aria-label="Website"><i class="fa-solid fa-globe"></i></a>
+        <!-- ORCID: replace with your iD and uncomment
+        <a href="https://orcid.org/0000-0000-0000-0000" aria-label="ORCID"><i class="ai ai-orcid"></i></a> -->
+      </div>
+    </div>
+    <div class="portrait">
+      <div class="ring"><img src="https://avatars.githubusercontent.com/u/158750356?v=4" alt="Dr. Sibasish Dhibar"></div>
+      <div class="badge-float bf1"><i class="fa-solid fa-graduation-cap"></i> Ph.D., IIT Roorkee</div>
+      <div class="badge-float bf2"><i class="fa-solid fa-chalkboard-user"></i> Lecturer · Deep RL</div>
+    </div>
+  </div>
+  <a href="#stats" class="scroll-hint" aria-label="Scroll down"><i class="fa-solid fa-chevron-down"></i></a>
+</section>
+
+<!-- ================= STATS ================= -->
+<div class="stats" id="stats">
+  <div class="container">
+    <div class="grid">
+      <div class="stat"><b data-count="14">0</b><span>Journal articles</span></div>
+      <div class="stat"><b data-count="13">0</b><span>Papers in pipeline</span></div>
+      <div class="stat"><b data-count="366">0</b><span>Students taught at TUM</span></div>
+      <div class="stat"><b data-count="6">0</b><span>Theses supervised</span></div>
+      <div class="stat"><b data-count="19">0</b><span>Journals reviewed for</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= ABOUT ================= -->
+<section class="block" id="about">
+  <div class="container">
+    <div class="sec-head reveal"><div class="kicker">Who I am</div><h2>About Me</h2><div class="bar"></div></div>
+    <div class="about">
+      <div class="reveal">
+        <p class="lead">I am a <b>Postdoctoral Researcher</b> at the Centre of Digital Transformation, TUM School of Management, Technical University of Munich, working with Prof. Dr. Jingui Xie.</p>
+        <p>My research sits at the interface of mathematics, computer science and operations management. I work on stochastic processes and queueing theory, stochastic and multi-objective optimisation, Markov decision processes and reinforcement learning, and the game-theoretic analysis of how people behave strategically in congested systems.</p>
+        <p>I earned my Ph.D. in Mathematics at IIT Roorkee, then held postdoctoral positions at IIT Hyderabad and Amrita Vishwa Vidyapeetham, and a visiting research fellowship at KEDGE Business School, France. At TUM I teach English-taught master's courses in Deep Reinforcement Learning, Reinforcement Learning and Python for Data Analysis, and supervise master's and bachelor's theses.</p>
+        <p>I collaborate with researchers in India, Germany and France, and I'm always happy to discuss research collaborations and student projects.</p>
+      </div>
+      <div class="info-card reveal">
+        <h3>At a glance</h3>
+        <div class="info-row"><i class="fa-solid fa-briefcase"></i><div>Postdoctoral Researcher<small>TUM School of Management · since Sep 2025</small></div></div>
+        <div class="info-row"><i class="fa-solid fa-graduation-cap"></i><div>Ph.D. in Mathematics<small>IIT Roorkee · 2023</small></div></div>
+        <div class="info-row"><i class="fa-solid fa-chalkboard"></i><div>Lecturer, RL &amp; Deep RL<small>Teaching evaluation 1.9 (Very Good)</small></div></div>
+        <div class="info-row"><i class="fa-solid fa-plane"></i><div>Visiting Research Fellow<small>KEDGE Business School, France · 2025</small></div></div>
+        <div class="info-row"><i class="fa-solid fa-location-dot"></i><div>Heilbronn, Germany<small>TUM Campus Heilbronn</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RESEARCH INTERESTS ================= -->
+<section class="block" id="research">
+  <div class="container">
+    <div class="sec-head reveal"><div class="kicker">What I work on</div><h2>Research Interests</h2><div class="bar"></div></div>
+    <div class="cards">
+      <div class="rcard reveal"><div class="ic"><i class="fa-solid fa-people-line"></i></div><h3>Queueing Theory</h3><p>Retrial, multi-server and phase-type queues; stationary, transient and nonlinear-dynamics analysis of service systems.</p></div>
+      <div class="rcard reveal"><div class="ic"><i class="fa-solid fa-wave-square"></i></div><h3>Stochastic Processes</h3><p>Markov chains, phase-type distributions and self-exciting Hawkes processes for modelling bursty, state-dependent demand.</p></div>
+      <div class="rcard reveal"><div class="ic"><i class="fa-solid fa-robot"></i></div><h3>MDPs &amp; Reinforcement Learning</h3><p>Deep and explainable RL for admission control, preemption, routing and berth allocation in stochastic systems.</p></div>
+      <div class="rcard reveal"><div class="ic"><i class="fa-solid fa-bullseye"></i></div><h3>Stochastic &amp; Multi-Objective Optimisation</h3><p>NSGA-II, PSO, grey-wolf and other metaheuristics combined with simulation for cost–service trade-offs.</p></div>
+      <div class="rcard reveal"><div class="ic"><i class="fa-solid fa-chess"></i></div><h3>Game Theory &amp; Strategic Behaviour</h3><p>Equilibrium joining strategies, Wardrop equilibria and customer behaviour in congested and hybrid systems.</p></div>
+      <div class="rcard reveal"><div class="ic"><i class="fa-solid fa-handshake-angle"></i></div><h3>Human–AI Collaboration</h3><p>Routing, trust and queue management when human servers and AI agents share the same workload.</p></div>
+    </div>
+    <div class="domains reveal">
+      <span class="pill"><i class="fa-solid fa-hospital"></i> Healthcare &amp; telehealth</span>
+      <span class="pill"><i class="fa-solid fa-warehouse"></i> Warehousing &amp; supply chains</span>
+      <span class="pill"><i class="fa-solid fa-ship"></i> Port &amp; berth operations</span>
+      <span class="pill"><i class="fa-solid fa-headset"></i> Call centres &amp; services</span>
+      <span class="pill"><i class="fa-solid fa-industry"></i> Job-shop scheduling</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section class="block" id="experience">
+  <div class="container">
+    <div class="sec-head reveal"><div class="kicker">My journey</div><h2>Experience &amp; Education</h2><div class="bar"></div></div>
+    <div class="timeline">
+      <div class="tl reveal"><div class="box"><span class="date">Sep 2025 – Present</span><h3>Postdoctoral Researcher</h3><div class="org">Centre of Digital Transformation, Technical University of Munich, Heilbronn · PI: Prof. Dr. Jingui Xie</div></div></div>
+      <div class="tl reveal"><div class="box"><span class="date">2025</span><h3>Visiting Research Fellow</h3><div class="org">KEDGE Business School, France · Mentor: Prof. Dr. Olga Battaïa · IFI programme, Embassy of France in India</div></div></div>
+      <div class="tl reveal"><div class="box"><span class="date">May 2024 – May 2025</span><h3>Postdoctoral Fellow</h3><div class="org">Dept. of Entrepreneurship and Management, IIT Hyderabad · PI: Prof. Dr. Lohitaksha M. Maiyar</div></div></div>
+      <div class="tl reveal"><div class="box"><span class="date">Nov 2023 – May 2024</span><h3>Postdoctoral Fellow</h3><div class="org">School of Artificial Intelligence, Amrita Vishwa Vidyapeetham, Bengaluru · PI: Prof. Dr. Gopalakrishnan E. A.</div></div></div>
+      <div class="tl reveal"><div class="box"><span class="date">Aug 2023 – Dec 2023</span><h3>Project Research Intern — Deloitte</h3><div class="org">Adversarial Attack Detection on Autonomous-Vehicle Data</div></div></div>
+      <div class="tl reveal"><div class="box"><span class="date">2018 – 2023</span><h3>Ph.D. in Mathematics</h3><div class="org">IIT Roorkee · Thesis: <i>Cost Optimization and Joining Strategies for Markovian Queues</i> · Supervisor: Prof. Madhu Jain</div></div></div>
+      <div class="tl reveal"><div class="box"><span class="date">2015 – 2017</span><h3>M.Sc. in Mathematics</h3><div class="org">Visva-Bharati University · Thesis on fractional calculus and rolling ship motion</div></div></div>
+      <div class="tl reveal"><div class="box"><span class="date">2012 – 2015</span><h3>B.Sc. in Mathematics</h3><div class="org">University of Burdwan, West Bengal</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PUBLICATIONS ================= -->
+<section class="block" id="publications">
+  <div class="container">
+    <div class="sec-head reveal"><div class="kicker">Research output</div><h2>Publications</h2><div class="bar"></div></div>
+    <div class="pub-tools reveal">
+      <div class="tabs" id="tabs">
+        <button data-f="all" class="on">All<span class="n"></span></button>
+        <button data-f="pub">Published<span class="n"></span></button>
+        <button data-f="rev">In Revision<span class="n"></span></button>
+        <button data-f="ur">Under Review<span class="n"></span></button>
+        <button data-f="ch">Book Chapters<span class="n"></span></button>
+      </div>
+      <div class="search"><i class="fa-solid fa-magnifying-glass"></i><input id="q" type="search" placeholder="Search title or journal…"></div>
+    </div>
+    <div id="pubs"></div>
+    <p class="empty" id="empty">No publications match your search.</p>
+    <p style="text-align:center;margin-top:20px"><a class="btn" style="border:1px solid var(--line);color:var(--ink)" href="https://scholar.google.com/citations?user=O_9uGEEAAAAJ&hl=en"><i class="ai ai-google-scholar"></i> Full list on Google Scholar</a></p>
+  </div>
+</section>
+
+<!-- ================= TEACHING ================= -->
+<section class="block" id="teaching">
+  <div class="container">
+    <div class="sec-head reveal"><div class="kicker">In the classroom</div><h2>Teaching</h2><div class="bar"></div></div>
+    <div class="teach-grid">
+      <div class="course reveal"><div class="term">Winter 2026</div><h3>Deep Reinforcement Learning</h3><div class="code">TUM · WIHN0033 · Master</div><div class="meta"><span><i class="fa-solid fa-users"></i>87 students</span><span><i class="fa-solid fa-award"></i>6 ECTS</span></div></div>
+      <div class="course reveal"><div class="term">Winter 2026</div><h3>Introduction to Reinforcement Learning</h3><div class="code">TUM · MGTHN0058 · Master</div><div class="meta"><span><i class="fa-solid fa-users"></i>27 students</span><span><i class="fa-solid fa-award"></i>6 ECTS</span></div></div>
+      <div class="course reveal"><div class="term">Winter 2026</div><h3>Programming for Management Studies</h3><div class="code">TUM · MGTHN0144s · MMDT</div><div class="meta"><span><i class="fa-solid fa-users"></i>100 students</span><span><i class="fa-solid fa-award"></i>6 ECTS</span></div></div>
+      <div class="course reveal"><div class="term">Summer 2026</div><h3>Introduction to Python for Data Analysis</h3><div class="code">TUM · WIHN0048 · Master</div><div class="meta"><span><i class="fa-solid fa-users"></i>23 students</span><span><i class="fa-solid fa-award"></i>6 ECTS</span></div><span class="eval"><i class="fa-solid fa-star"></i> Evaluation 1.9 — Very Good</span></div>
+      <div class="course reveal"><div class="term">Summer 2026</div><h3>Programming for Management Studies</h3><div class="code">TUM · MGTHN0144s · MMDT</div><div class="meta"><span><i class="fa-solid fa-users"></i>35 students</span><span><i class="fa-solid fa-award"></i>6 ECTS</span></div></div>
+      <div class="course reveal"><div class="term">Autumn 2025</div><h3>Deep Reinforcement Learning</h3><div class="code">TUM · WIHN0033 · Master</div><div class="meta"><span><i class="fa-solid fa-users"></i>49 students</span><span><i class="fa-solid fa-award"></i>6 ECTS</span></div></div>
+    </div>
+    <div class="ta reveal"><b><i class="fa-solid fa-chalkboard-user" style="color:var(--blue)"></i> Also taught:</b> Programming for Management Studies (TUM, Autumn 2025, 45 students) · Teaching Assistant at IIT Roorkee for Probability Theory and Statistics (MAN006; 2019–2021) and Basic Mathematics (MAN001; 2020).</div>
+  </div>
+</section>
+
+<!-- ================= SUPERVISION ================= -->
+<section class="block" id="supervision">
+  <div class="container">
+    <div class="sec-head reveal"><div class="kicker">Mentoring</div><h2>Student Supervision</h2><div class="bar"></div></div>
+    <div class="sup-grid">
+      <div class="sup reveal"><div class="ic"><i class="fa-solid fa-user-graduate"></i></div><div><h3>Deep Reinforcement Learning for Long-Term German Real-Estate Investment under Lifecycle Taxation</h3><div class="m">Master's · Ying Chen · 2026 <span class="status done">Completed</span></div></div></div>
+      <div class="sup reveal"><div class="ic"><i class="fa-solid fa-user-graduate"></i></div><div><h3>Simulation-Based Multiobjective Optimization of a Telephone Retrial Queue: An NHS-Informed Study</h3><div class="m">Bachelor's · Xinyue Zhu · 2026 <span class="status done">Completed</span></div></div></div>
+      <div class="sup reveal"><div class="ic"><i class="fa-solid fa-user-graduate"></i></div><div><h3>Architecting a Management Information System for Post-Trade Risk Transfers (DMIST Standards)</h3><div class="m">Bachelor's · Petar Nedyalkov · 2026 <span class="status done">Completed</span></div></div></div>
+      <div class="sup reveal"><div class="ic"><i class="fa-solid fa-user-graduate"></i></div><div><h3>Human–AI Assisted Queue Management in Service Systems</h3><div class="m">Master's · Bonifacius Raditya Yudha <span class="status on">Ongoing</span></div></div></div>
+      <div class="sup reveal"><div class="ic"><i class="fa-solid fa-user-graduate"></i></div><div><h3>Simulation-Based Decision Support for Queue Management in Service Operations</h3><div class="m">Master's · Zhannat Toleubekova <span class="status on">Ongoing</span></div></div></div>
+      <div class="sup reveal"><div class="ic"><i class="fa-solid fa-user-graduate"></i></div><div><h3>Predictive Queue Management for Service Operations</h3><div class="m">Bachelor's · Dhilain Warnakulasooriya <span class="status on">Ongoing</span></div></div></div>
+    </div>
+    <div class="industry reveal">
+      <div class="ic"><i class="fa-solid fa-dove"></i></div>
+      <div>
+        <h3>Industry Project: Data-Driven Optimization of BirdVision Shutdown Logic</h3>
+        <div class="m">With BirdVision GmbH &amp; Co. KG · Oct 2026 – present · Academic supervisor</div>
+        <p>BirdVision's system shuts down wind turbines based on detected bird size classes. The student team is building an application that identifies which size classes and species trigger shutdowns, and proposes settings that cut unnecessary shutdowns without weakening species protection.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HONOURS / TALKS ================= -->
+<section class="block" id="honours">
+  <div class="container">
+    <div class="sec-head reveal"><div class="kicker">Recognition &amp; outreach</div><h2>Honours, Talks &amp; Service</h2><div class="bar"></div></div>
+    <div class="two">
+      <div class="panel reveal">
+        <h3><i class="fa-solid fa-trophy"></i> Awards &amp; Honours</h3>
+        <div class="li"><span class="y">2025</span><div><b>Visiting Research Fellowship</b>, KEDGE Business School, France<br><small>French Institute in India (IFI), Embassy of France</small></div></div>
+        <div class="li"><span class="y">2025</span><div><b>Best Research Presentation Award</b><br><small>TLS STEMM Workshop, IIT Delhi</small></div></div>
+        <div class="li"><span class="y">2022</span><div><b>International Travel Support</b>, IIT Roorkee<br><small>EURO 2022, Aalto University, Finland</small></div></div>
+        <div class="li"><span class="y">2018</span><div><b>CSIR-NET</b>, Mathematical Sciences<br><small>All India Rank 111</small></div></div>
+        <div class="li"><span class="y">2018</span><div><b>GATE</b>, Mathematics<br><small>Top 15% nationwide</small></div></div>
+        <div class="li"><span class="y">2026</span><div><b>Organiser</b>, Research Workshop on Human–AI Interaction in Operations Innovation<br><small>TUM School of Management, Heilbronn</small></div></div>
+      </div>
+      <div class="panel reveal">
+        <h3><i class="fa-solid fa-microphone-lines"></i> Talks &amp; Presentations</h3>
+        <div class="li"><span class="y">2026</span><div>Reward-Driven Customer Behaviour in an Omni-Channel M/M/1 Service System<br><small>iMarC, IIM Shillong</small></div></div>
+        <div class="li"><span class="y">2025</span><div>Bi-objective Optimization of Warehouse Management with Double Orbit<br><small>PAN-IIM World Management Conference, IIM Ranchi</small></div></div>
+        <div class="li"><span class="y">2024</span><div>Invited talk: Hybrid Transfer Learning for Skin Lesion Classification<br><small>VIT Chennai</small></div></div>
+        <div class="li"><span class="y">2023</span><div>Invited talk: Adversarial Attack Detection Models<br><small>O.P. Jindal Global University</small></div></div>
+        <div class="li"><span class="y">2022</span><div>Firefly Algorithm for Cost Optimization of FM/FM/1/WV Retrial Queue<br><small>EURO 2022, Espoo · CLAIO 2022, Buenos Aires</small></div></div>
+        <div class="li"><span class="y">More</span><div><small>IEEE ICPEICES (DTU Delhi), ISI Delhi, IIT Delhi, BITS Pilani</small></div></div>
+      </div>
+    </div>
+    <h3 class="reveal" style="text-align:center;margin:44px 0 16px;font-size:1.15rem">Reviewer for international journals</h3>
+    <div class="reviewers reveal">
+      <span>European Journal of Operational Research</span><span>Journal of the Operational Research Society</span><span>Operational Research</span><span>Information Processing &amp; Management</span><span>BMC Health Services Research</span><span>ISA Transactions</span><span>Scientific Reports</span><span>IEEE Access</span><span>Journal of Supercomputing</span><span>Cluster Computing</span><span>Journal of Cloud Computing</span><span>Biomedical Signal Processing &amp; Control</span><span>Int. J. of Fuzzy Systems</span><span>J. of Intelligent &amp; Fuzzy Systems</span><span>Evolutionary Intelligence</span><span>Operations Research Forum</span><span>OPSEARCH</span><span>Int. J. of Applied &amp; Computational Mathematics</span><span>Alexandria Engineering Journal</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT / FOOTER ================= -->
+<footer class="contact" id="contact">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <h2>Let's collaborate</h2>
+        <p>I welcome conversations about research collaborations, thesis supervision and invited talks on queueing, stochastic optimisation and reinforcement learning.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <div class="row"><i class="fa-solid fa-envelope"></i><a href="mailto:sibasish.dhibar@tum.de">sibasish.dhibar@tum.de</a></div>
+        <div class="row"><i class="fa-solid fa-building-columns"></i><span>TUM School of Management<br>Bildungscampus, 74076 Heilbronn, Germany</span></div>
+      </div>
+      <div>
+        <h4>Profiles</h4>
+        <div class="row"><i class="ai ai-google-scholar"></i><a href="https://scholar.google.com/citations?user=O_9uGEEAAAAJ&hl=en">Google Scholar</a></div>
+        <div class="row"><i class="fa-brands fa-linkedin-in"></i><a href="https://www.linkedin.com/in/sibasish-dhibar-637152177/">LinkedIn</a></div>
+        <div class="row"><i class="fa-brands fa-github"></i><a href="https://github.com/DhibarSibasish">GitHub</a></div>
+      </div>
+    </div>
+    <div class="foot">
+      <span>© <span id="yr">2026</span> Dr. Sibasish Dhibar · All rights reserved</span>
+      <span class="visits" title="Total profile visits">
+        <i class="fa-solid fa-eye"></i> Profile visits
+        <img src="https://visitor-badge.laobi.icu/badge?page_id=dhibarsibasish.github.io&left_text=visitors&left_color=%230b1f3a&right_color=%232563eb" alt="visitor count">
+      </span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script>
+/* ---------- Publications data (edit here to add new papers) ---------- */
+const PUBS = [
+ // k: pub = published/accepted, rev = in revision, ur = under review, ch = book chapter
+ {k:"pub",y:"2026",t:"An Integrated Queueing Simulation and Multi-Objective Optimization Framework for Business Operations Management",a:"<b>Dhibar, S.</b>",v:"Journal of Modelling in Management, 1–33",tags:["ABDC C","WoS Q2"]},
+ {k:"pub",y:"2026",t:"Strategic Behaviour of M/M/1 Retrial Queue with Discouragement and Working Vacation",a:"Rani, S., Jain, M., & <b>Dhibar, S.</b>",v:"OPSEARCH, 1–28",tags:["ABDC C","ESCI"]},
+ {k:"pub",y:"2025",t:"MOHFDQ: A Metaheuristic Approach to Optimizing Hospital Patient Registration with a Fuzzy Double-Orbit Queueing Model",a:"<b>Dhibar, S.</b>",v:"Swarm and Evolutionary Computation, 98, 102090",tags:["WoS Q1","SCIE"]},
+ {k:"pub",y:"2025",t:"Metaheuristics and Strategic Behavior of Markovian Retrial Queue under Breakdown, Vacation, and Bernoulli Feedback",a:"<b>Dhibar, S.</b>, & Jain, M.",v:"Applied Intelligence, 55, 273",tags:["WoS Q2","SCIE"]},
+ {k:"pub",y:"2025",t:"Joining Strategy and FM/FM/1 for Double Orbit Retrial Model with Imperfect Service using Genetic Algorithm and Golden Section Search",a:"<b>Dhibar, S.</b>, & Jain, M.",v:"International Journal of Computational Intelligence Systems (Accepted)",tags:["SCIE"]},
+ {k:"pub",y:"2025",t:"An Enhanced Grey Wolf Optimization Method for Feature Selection and Explainable Prediction in Chronic Disease Analytics",a:"<b>Dhibar, S.</b>, Gupta, D., Gopalakrishnan, E. A., & Vekkot, S.",v:"Decision Analytics Journal, 17, 100655",tags:["Q1","Scopus"]},
+ {k:"pub",y:"2025",t:"Metaheuristic Optimization and Strategic Behavior of Markovian Vacation Queue with Retrial Policy: Application to Virtual Call Center",a:"<b>Dhibar, S.</b>, & Jain, M.",v:"Evolutionary Intelligence, 18, 13",tags:["Q1","ESCI","Scopus"]},
+ {k:"pub",y:"2024",t:"ANFIS Simulation Integrated in FM/FM/1/(CV+WV) Queue with Bernoulli Service Interruption and Metaheuristic Optimization for Mathematical Model",a:"<b>Dhibar, S.</b>, & Jain, M.",v:"Journal of Supercomputing, 81, 201",tags:["WoS Q2","SCIE"]},
+ {k:"pub",y:"2024",t:"Particle Swarm Optimization and FM/FM/1/WV Retrial Queue with Catastrophes",a:"<b>Dhibar, S.</b>, & Jain, M.",v:"Journal of Supercomputing, 80, 15429–15463",tags:["WoS Q2","SCIE"],code:"https://github.com/DhibarSibasish/Particle-Swarm-Optimization-and-FM-FM-1-WV-Retrial-1-Queues-with-Catastrophes"},
+ {k:"pub",y:"2023",t:"ANFIS and Metaheuristic Optimization for Strategic Joining Policy with Re-attempt and Vacation",a:"Jain, M., & <b>Dhibar, S.</b>",v:"Mathematics and Computers in Simulation, 211, 57–84",tags:["ABDC A","WoS Q1","SCIE"]},
+ {k:"pub",y:"2023",t:"Strategic Behaviour for M/M/1 Double Orbit Retrial Queue with Imperfect Service and Vacation",a:"<b>Dhibar, S.</b>, & Jain, M.",v:"International Journal of Mathematics in Operational Research, 25(3), 369–385",tags:["WoS Q3","Scopus"]},
+ {k:"pub",y:"2023",t:"Analysis of Markovian Retrial Queue with Double Orbits, Vacation, Orbital Search, and Disaster using ANFIS Approach",a:"Rani, S., Jain, M., & <b>Dhibar, S.</b>",v:"Iranian Journal of Science and Technology, Transactions A: Science, 47, 1751–1764",tags:["WoS Q3","SCIE"]},
+ {k:"pub",y:"2023",t:"ANFIS Computing for M/M/∞ Queue with Two Types of Service Interruption and Balking",a:"Singh, N., Jain, M., & <b>Dhibar, S.</b>",v:"Proceedings of the National Academy of Sciences, India, Section A, 94, 63–73",tags:["WoS Q3","SCIE"]},
+ {k:"pub",y:"2022",t:"Markovian Working Vacation Queue with Imperfect Service, Balking and Retrial",a:"Jain, M., <b>Dhibar, S.</b>, & Sanga, S. S.",v:"Journal of Ambient Intelligence and Humanized Computing, 13(5), 1907–1923",tags:["WoS Q2","SCIE"]},
+
+ {k:"rev",y:"POM",t:"Equilibrium Joining in Hawkes-Driven Multiclass Queues",a:"<b>Dhibar, S.</b>",v:"Production and Operations Management — being prepared for resubmission",tags:["ABDC A*","FT50","UTD24","ABS 4"]},
+ {k:"rev",y:"JOS",t:"Multi-Objective Optimization of Warehouse Management Using GA and NSGA-II with Integrated Retrial Queueing Systems",a:"<b>Dhibar, S.</b>",v:"Journal of Scheduling — revision submitted",tags:["ABDC A","WoS Q1"]},
+ {k:"rev",y:"MCAP",t:"Stationary Analysis of a Multi-Server Queue with Phase-Type Service and Queueing-Time Dependent Rates",a:"<b>Dhibar, S.</b>",v:"Methodology and Computing in Applied Probability — revision submitted",tags:["WoS Q2","SCIE"]},
+ {k:"rev",y:"ORIJ",t:"Stochastic Game-Theoretic Equilibrium Analysis and Stochastic Optimization in Retrial Queueing Networks with Working Vacations",a:"<b>Dhibar, S.</b>",v:"Operational Research — revision submitted",tags:["ABDC C","WoS Q1"]},
+ {k:"rev",y:"CEJOR",t:"Stochastic Multiobjective Optimization of Warehouse Service Policies under Lead-Time Uncertainty: An FMCG Logistics Case Study",a:"<b>Dhibar, S.</b>",v:"Central European Journal of Operations Research — revision submitted",tags:["ABDC C","WoS Q2"]},
+ {k:"rev",y:"APJOR",t:"Explainable Deep Reinforcement Learning for Admission Control in M/M/c/K Queueing Systems",a:"<b>Dhibar, S.</b>",v:"Asia-Pacific Journal of Operational Research — revision submitted",tags:["ABDC C","WoS Q2"]},
+
+ {k:"ur",y:"OR",t:"Dynamic Preemption Strategies for Blended-Server Queues in Hybrid Physical–Telehealth Systems",a:"<b>Dhibar, S.</b>",v:"Operations Research — under review",tags:["ABDC A*","WoS Q1"]},
+ {k:"ur",y:"MOR",t:"Nonlinear Dynamics and Equilibrium in Strategic M/M/1 Queues",a:"<b>Dhibar, S.</b>",v:"Mathematics of Operations Research — under review",tags:["ABDC A","WoS Q1"]},
+ {k:"ur",y:"CAIE",t:"A Hybrid Queueing–Reinforcement Learning Framework for Dynamic Berth Allocation",a:"<b>Dhibar, S.</b>",v:"Computers & Industrial Engineering — under review",tags:["ABDC A","WoS Q1"]},
+ {k:"ur",y:"JCAM",t:"Nonlinear Dynamics of Phase-Type Multi-Server Queues: An ODE and Numerical Bifurcation Approach",a:"<b>Dhibar, S.</b>",v:"Journal of Computational and Applied Mathematics — under review",tags:["WoS Q1","SCIE"]},
+ {k:"ur",y:"ORS",t:"A Queueing-Theoretic Digital Twin for Job-Shop Scheduling under Stochastic Arrivals",a:"<b>Dhibar, S.</b>",v:"OR Spectrum — under review",tags:["ABDC B","WoS Q1"]},
+ {k:"ur",y:"CMS",t:"DPROF: A Data-Driven Parallel Routing Optimization Framework for Hybrid AI–Human Service Systems",a:"<b>Dhibar, S.</b>",v:"Computational Management Science — under review",tags:["ABDC B","WoS Q2"]},
+ {k:"ur",y:"DGA",t:"Wardrop Equilibria with Endogenous Trust in Human–AI Service Systems",a:"<b>Dhibar, S.</b>",v:"Dynamic Games and Applications — under review",tags:["ABDC B","WoS Q2"]},
+
+ {k:"ch",y:"2022",t:"Retrial Inventory-Queueing Model with Inspection Processes and Imperfect Production",a:"Mehta, P., Jain, M., & <b>Dhibar, S.</b>",v:"In: Data Analytics and Artificial Intelligence for Inventory and Supply Chain Management, 97–111",tags:["Book chapter"]},
+ {k:"ch",y:"2021",t:"Transient Analysis of M/M/1 Retrial Queue with Balking, Imperfect Service and Working Vacation",a:"Jain, M., & <b>Dhibar, S.</b>",v:"In: Mathematical Modeling and Computation of Real-Time Problems, CRC Press, 12–23",tags:["Book chapter"]}
+];
+const LABEL={pub:"",rev:"Revision",ur:"Review",ch:"Chapter"};
+const tagClass=t=>/A\*|FT50|UTD24|ABS 4/.test(t)?"tag top":/Q1/.test(t)?"tag q1":"tag";
+const box=document.getElementById("pubs");
+box.innerHTML=PUBS.map(p=>`
+ <article class="pub" data-k="${p.k}" data-s="${(p.t+" "+p.v).toLowerCase()}">
+  <div class="yr">${p.k==="pub"||p.k==="ch"?p.y:'<i class="fa-regular fa-file-lines"></i>'}<small>${LABEL[p.k]}</small></div>
+  <div><h3>${p.t}</h3><div class="au">${p.a}</div><div class="ven">${p.v}</div>
+  <div class="tags">${p.tags.map(t=>`<span class="${tagClass(t)}">${t}</span>`).join("")}${p.code?`<a class="tag code" href="${p.code}"><i class="fa-brands fa-github"></i> Code</a>`:""}</div></div>
+ </article>`).join("");
+let filt="all";
+const tabs=[...document.querySelectorAll("#tabs button")], q=document.getElementById("q");
+tabs.forEach(b=>{const f=b.dataset.f;b.querySelector(".n").textContent=f==="all"?PUBS.length:PUBS.filter(p=>p.k===f).length;
+  b.onclick=()=>{filt=f;tabs.forEach(x=>x.classList.toggle("on",x===b));apply();}});
+q.oninput=apply;
+function apply(){const s=q.value.trim().toLowerCase();let n=0;
+  document.querySelectorAll(".pub").forEach(el=>{const ok=(filt==="all"||el.dataset.k===filt)&&(!s||el.dataset.s.includes(s));el.classList.toggle("hide",!ok);if(ok)n++;});
+  document.getElementById("empty").style.display=n?"none":"block";}
+
+/* ---------- Typing animation ---------- */
+const ROLES=["Postdoctoral Researcher at TUM","Queueing Theorist","Reinforcement Learning Researcher","Stochastic Optimisation Specialist","Lecturer in Deep RL","Applied Probabilist"];
+(function(){const el=document.getElementById("typed");let r=0,i=0,del=false;
+ (function tick(){const w=ROLES[r];el.textContent=w.slice(0,i);
+  if(!del&&i<w.length){i++;setTimeout(tick,70)}
+  else if(!del){del=true;setTimeout(tick,1700)}
+  else if(i>0){i--;setTimeout(tick,35)}
+  else{del=false;r=(r+1)%ROLES.length;setTimeout(tick,300)}})();})();
+
+/* ---------- Network background (stochastic nodes) ---------- */
+(function(){const c=document.getElementById("net"),x=c.getContext("2d");let W,H,P=[];
+ function size(){W=c.width=c.offsetWidth;H=c.height=c.offsetHeight;const n=Math.min(70,Math.floor(W*H/18000));
+  P=Array.from({length:n},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4}))}
+ size();addEventListener("resize",size);
+ (function draw(){x.clearRect(0,0,W,H);
+  for(const p of P){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;
+   x.fillStyle="rgba(147,197,253,.8)";x.beginPath();x.arc(p.x,p.y,1.8,0,7);x.fill()}
+  for(let i=0;i<P.length;i++)for(let j=i+1;j<P.length;j++){const d=Math.hypot(P[i].x-P[j].x,P[i].y-P[j].y);
+   if(d<130){x.strokeStyle=`rgba(96,165,250,${.25*(1-d/130)})`;x.beginPath();x.moveTo(P[i].x,P[i].y);x.lineTo(P[j].x,P[j].y);x.stroke()}}
+  requestAnimationFrame(draw)})();})();
+
+/* ---------- Count-up stats ---------- */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;
+ e.target.classList.add("in");
+ e.target.querySelectorAll?.("[data-count]").forEach(el=>{const end=+el.dataset.count;let s=null;
+  const step=t=>{s??=t;const k=Math.min((t-s)/1400,1);el.textContent=Math.round(end*(1-Math.pow(1-k,3)))+(k===1&&end>100?"+":"");if(k<1)requestAnimationFrame(step)};requestAnimationFrame(step)});
+ io.unobserve(e.target)}),{threshold:.15});
+document.querySelectorAll(".reveal,#stats").forEach(el=>io.observe(el));
+
+/* ---------- Navbar, active link, menu, theme, back-to-top ---------- */
+const nav=document.getElementById("nav"),upBtn=document.getElementById("toTop"),links=[...document.querySelectorAll(".menu a")];
+addEventListener("scroll",()=>{nav.classList.toggle("scrolled",scrollY>40);upBtn.classList.toggle("show",scrollY>600);
+ let cur="";document.querySelectorAll("section[id],footer[id]").forEach(s=>{if(scrollY>=s.offsetTop-120)cur=s.id});
+ links.forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#"+cur))});
+upBtn.onclick=()=>scrollTo({top:0,behavior:"smooth"});
+const menu=document.getElementById("menu");
+document.getElementById("burger").onclick=()=>menu.classList.toggle("open");
+links.forEach(a=>a.onclick=()=>menu.classList.remove("open"));
+const root=document.documentElement,tb=document.getElementById("theme");
+function setTheme(t){root.dataset.theme=t;tb.innerHTML=t==="dark"?'<i class="fa-solid fa-sun"></i>':'<i class="fa-solid fa-moon"></i>';try{localStorage.setItem("theme",t)}catch(e){}}
+let saved=null;try{saved=localStorage.getItem("theme")}catch(e){}
+setTheme(saved||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"));
+tb.onclick=()=>setTheme(root.dataset.theme==="dark"?"light":"dark");
+document.getElementById("yr").textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
